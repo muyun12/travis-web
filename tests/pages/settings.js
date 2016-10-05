@@ -77,7 +77,7 @@ export default PageObject.create({
       interval: text('.interval'),
       nextRun: text('.next-run'),
       lastRun: text('.last-run'),
-      runOnlyWhenNewCommitText: text('.dont-run-if-recent-build-exists'),
+      dontRunIfRecentBuildExistsText: text('.dont-run-if-recent-build-exists'),
       delete: clickable('.icon-delete')
     }
   }),

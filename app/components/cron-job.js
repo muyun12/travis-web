@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   isDeleting: false,
   actionType: 'Save',
   store: service(),
-  runOnlyWhenNewCommit: Ember.computed('cron.dont_run_if_recent_build_exists', function () {
+  dontRunIfRecentBuildExists: Ember.computed('cron.dont_run_if_recent_build_exists', function () {
     if (this.get('cron.dont_run_if_recent_build_exists')) {
       return 'Do not run if there has been a build in the last 24h';
     } else {
