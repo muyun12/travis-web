@@ -74,9 +74,10 @@ export default PageObject.create({
 
     item: {
       branchName: text('.branch-name'),
-      enqueuingInterval: text('.enqueuing-interval'),
-      disableByBuildText: text('.disable-by-build'),
-
+      interval: text('.interval'),
+      nextRun: text('.next-run'),
+      lastRun: text('.last-run'),
+      runOnlyWhenNewCommitText: text('.run-only-when-new-commit'),
       delete: clickable('.icon-delete')
     }
   }),
