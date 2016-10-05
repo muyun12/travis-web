@@ -80,7 +80,7 @@ moduleForAcceptance('Acceptance | repo settings', {
 
     this.dailyCron = server.create('cron', {
       interval: 'daily',
-      run_only_when_new_commit: false,
+      dont_run_if_recent_build_exists: false,
       last_run: moment(),
       next_run: moment().add(1, 'days'),
       repository_id: repoId,
@@ -89,7 +89,7 @@ moduleForAcceptance('Acceptance | repo settings', {
 
     server.create('cron', {
       interval: 'weekly',
-      run_only_when_new_commit: true,
+      dont_run_if_recent_build_exists: true,
       last_run: moment(),
       next_run: moment().add(1, 'weeks'),
       repository_id: repoId,
